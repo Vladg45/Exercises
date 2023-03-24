@@ -38,7 +38,7 @@ int main()
     const regex r(R"(^( *)(\-?)([0-9]+)(\-|\+|\*|\/)(\-?)([0-9]+)(=)(\-?)([0-9]+)( *)$)");
 
     // Проверка на ввод уравнения
-    do
+    while (true)
     {
         printf("Проверка на ввод уравнения.\nВведите уравнение без пробелов: ");
         getline(cin, text);
@@ -54,7 +54,7 @@ int main()
             printf("Ошибка, запись некорректна.\n");
         system("pause");
         system("cls");
-    } while (true);
+    }
 
     int first_number = stoi(result[2].str() + result[3].str());
     string operation = result[4].str();
